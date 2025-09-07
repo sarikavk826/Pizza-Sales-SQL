@@ -1,31 +1,48 @@
-# Pizza-Sales-SQL
-SQL project analyzing pizza sales data
-# Analysis-with-SQL (Pizza Sales)
+🍕 Pizza Sales SQL Analysis
 
-SQL helps you to easily get information from data with high efficiency. To manipulate the data in databases—like Create, Read, Update, and Delete—we use SQL queries. SQL is a standard language for storing, manipulating, and retrieving data in databases.
+SQL allows you to efficiently store, manipulate, and retrieve data from databases. This project demonstrates data analysis on pizza sales using SQL by creating a relational database, importing sample data, and performing queries to extract business insights.
 
----
+Database Overview
 
-## Steps
+Database Name: PizzaHut
 
-First, a **database named `PizzaHut`** was created. In this database, the following tables were created: `order_details`, `orders`, `pizza_types`, and `pizzas`. These tables are inter-related with the below keys.
+Tables and Columns:
 
-- **order_details** table has `order_details_id` as Primary Key and columns `order_id`, `pizza_id`, `quantity`.  
-- **orders** table has `order_id` as Primary Key and columns `order_date`, `order_time`.  
-- **pizza_types** table has `pizza_type_id` as Primary Key and columns `name`, `category`, `ingredients`.  
-- **pizzas** table has `pizza_id` as Primary Key and columns `pizza_type_id`, `size`, `price`.  
+order_details
 
-The required values were **imported from a spreadsheet** into the tables.
+order_details_id (Primary Key)
 
-For all the next queries, **SELECT** was used to retrieve data from the tables. Based on requirements, various queries were written to get the desired results, such as:  
+order_id (Foreign Key → orders)
 
-- Total pizzas sold per day  
-- Average pizzas per order  
-- Most popular pizza types and sizes  
-- Total revenue per day or per pizza type  
-- Customer order trends  
+pizza_id (Foreign Key → pizzas)
 
----
+quantity
 
-## Project Structure
+orders
+
+order_id (Primary Key)
+
+order_date
+
+order_time
+
+pizza_types
+
+pizza_type_id (Primary Key)
+
+name
+
+category
+
+ingredients
+
+pizzas
+
+pizza_id (Primary Key)
+
+pizza_type_id (Foreign Key → pizza_types)
+
+size
+
+price
 
