@@ -3,58 +3,22 @@
 SQL allows you to efficiently store, manipulate, and retrieve data from databases. This project demonstrates **data analysis on pizza sales** using SQL by creating a relational database, importing sample data, and performing queries to extract business insights.
 
 ---
+Steps
 
-## 🗂 Database Overview
+First, a database named PizzaHut was created. In this database, the following tables were created: order_details, orders, pizza_types, and pizzas. These tables are inter-related with the below keys.
 
-**Database Name:** `PizzaHut`  
+The order_details table has order_details_id as Primary Key and columns order_id, pizza_id, quantity.
 
-**Tables and Columns:**
+The orders table has order_id as Primary Key and columns order_date, order_time.
 
-1. **order_details**  
-   - `order_details_id` (Primary Key)  
-   - `order_id` (Foreign Key → orders)  
-   - `pizza_id` (Foreign Key → pizzas)  
-   - `quantity`  
+The pizza_types table has pizza_type_id as Primary Key and columns name, category, ingredients.
 
-2. **orders**  
-   - `order_id` (Primary Key)  
-   - `order_date`  
-   - `order_time`  
+The pizzas table has pizza_id as Primary Key and columns pizza_type_id, size, price.
 
-3. **pizza_types**  
-   - `pizza_type_id` (Primary Key)  
-   - `name`  
-   - `category`  
-   - `ingredients`  
+The required values were imported from a spreadsheet into the tables.
 
-4. **pizzas**  
-   - `pizza_id` (Primary Key)  
-   - `pizza_type_id` (Foreign Key → pizza_types)  
-   - `size`  
-   - `price`  
+For all the next queries, SELECT was used to retrieve data from the tables.Based on the requirement of the other queries the questions are solved to get the desired solution.
 
-> The tables are interrelated using primary and foreign keys to maintain data consistency.
 
----
-
-## 🛠 Steps
-
-1. **Database Creation:**  
-   - Created the `PizzaHut` database.  
-
-2. **Table Creation:**  
-   - Designed the tables `order_details`, `orders`, `pizza_types`, and `pizzas` with proper relationships.  
-
-3. **Data Import:**  
-   - Imported sample pizza sales data from a spreadsheet into the tables.  
-
-4. **Data Analysis:**  
-   - Used `SELECT` queries to retrieve and analyze data.  
-   - Example analyses:  
-     - Total pizzas sold per day.  
-     - Average pizzas per order.  
-     - Most popular pizzas by type or size.  
-     - Total revenue per day or per pizza type.  
-     - Customer order trends over time.  
 
 
