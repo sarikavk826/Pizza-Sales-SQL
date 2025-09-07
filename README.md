@@ -1,48 +1,60 @@
-🍕 Pizza Sales SQL Analysis
+# 🍕 Pizza Sales SQL Analysis
 
-SQL allows you to efficiently store, manipulate, and retrieve data from databases. This project demonstrates data analysis on pizza sales using SQL by creating a relational database, importing sample data, and performing queries to extract business insights.
+SQL allows you to efficiently store, manipulate, and retrieve data from databases. This project demonstrates **data analysis on pizza sales** using SQL by creating a relational database, importing sample data, and performing queries to extract business insights.
 
-Database Overview
+---
 
-Database Name: PizzaHut
+## 🗂 Database Overview
 
-Tables and Columns:
+**Database Name:** `PizzaHut`  
 
-order_details
+**Tables and Columns:**
 
-order_details_id (Primary Key)
+1. **order_details**  
+   - `order_details_id` (Primary Key)  
+   - `order_id` (Foreign Key → orders)  
+   - `pizza_id` (Foreign Key → pizzas)  
+   - `quantity`  
 
-order_id (Foreign Key → orders)
+2. **orders**  
+   - `order_id` (Primary Key)  
+   - `order_date`  
+   - `order_time`  
 
-pizza_id (Foreign Key → pizzas)
+3. **pizza_types**  
+   - `pizza_type_id` (Primary Key)  
+   - `name`  
+   - `category`  
+   - `ingredients`  
 
-quantity
+4. **pizzas**  
+   - `pizza_id` (Primary Key)  
+   - `pizza_type_id` (Foreign Key → pizza_types)  
+   - `size`  
+   - `price`  
 
-orders
+> The tables are interrelated using primary and foreign keys to maintain data consistency.
 
-order_id (Primary Key)
+---
 
-order_date
+## 🛠 Steps
 
-order_time
+1. **Database Creation:**  
+   - Created the `PizzaHut` database.  
 
-pizza_types
+2. **Table Creation:**  
+   - Designed the tables `order_details`, `orders`, `pizza_types`, and `pizzas` with proper relationships.  
 
-pizza_type_id (Primary Key)
+3. **Data Import:**  
+   - Imported sample pizza sales data from a spreadsheet into the tables.  
 
-name
+4. **Data Analysis:**  
+   - Used `SELECT` queries to retrieve and analyze data.  
+   - Example analyses:  
+     - Total pizzas sold per day.  
+     - Average pizzas per order.  
+     - Most popular pizzas by type or size.  
+     - Total revenue per day or per pizza type.  
+     - Customer order trends over time.  
 
-category
-
-ingredients
-
-pizzas
-
-pizza_id (Primary Key)
-
-pizza_type_id (Foreign Key → pizza_types)
-
-size
-
-price
 
